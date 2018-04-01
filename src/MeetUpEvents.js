@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import './App.css';
 import axios from 'axios';
-import {Grid,Row,Col,Button,Table} from 'react-bootstrap';
+import {Grid,Row,Button,Table} from 'react-bootstrap';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 
 class MeetUpEvents extends Component {
