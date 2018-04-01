@@ -24,7 +24,6 @@ class MeetUpEvents extends Component {
   evenetList() {
     axios.get('https://api.meetup.com/reactjs-dallas/events?&sign=true&photo-host=public&page=1')
     .then( (response) => {
-        console.log(response);
       this.setState({
           events:response.data
       })
@@ -37,9 +36,8 @@ class MeetUpEvents extends Component {
   rsvpClick(id) {
       axios.get('https://api.meetup.com/reactjs-dallas/events/'+id+'/rsvps?&sign=true&photo-host=public')
       .then( (response) => {
-          console.log(response);
           if(response.status === 200){
-               alert('RSVP Done');
+               alert('Thank You for your response');
           }
       })
       .catch((err) => {
